@@ -1,0 +1,12 @@
+---
+items:
+    - text: About
+      url: '/about'
+    - text: Grants
+      url: '/grants'
+    - text: Volunteering
+      url: '/volunteering'
+    - text: Gallery
+      url: '/gallery'
+    # - text: Blog
+    #   url: '/blog'

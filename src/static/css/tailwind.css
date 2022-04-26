@@ -5,7 +5,7 @@
 /*Your Custom CSS Goes here*/
 
 body {
-	@apply text-lg;
+	@apply text-2xl;
 }
 
 h1 {
@@ -29,4 +29,8 @@ p {
 body :not(pre) > code[class*='language-'],
 body pre[class*='language-'] {
 	@apply bg-gray-800;
+}
+
+ul {
+	@apply ml-8;
 }

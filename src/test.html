@@ -2,12 +2,7 @@
 layout: pages
 title: Test
 ---
-
-{%- from "./_includes/components/button/macro.njk" import button -%}
-
-
-
-{{ button({
-  primary: 'Hi',
-  secondary: 'there'
+{%- from "./_includes/system/component.njk" import component -%}
+{{ component('button', {
+  primary: 'Hello'
 }) }}

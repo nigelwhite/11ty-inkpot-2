@@ -1,0 +1,43 @@
+<div class="leading-loose">
+    <template x-for="faq in faqs" :key="faq.question">
+        <div>
+            <button
+                class="flex items-center justify-between w-full py-3 mt-4 font-bold border-b border-gray-400"
+                @click="faqs = faqs.map(f => ({ ...f, isOpen: f.question !== faq.question ? false : !f.isOpen}))"
+            >
+                <!-- Specs has it that only one component can be open at a time and also you should be able to toggle the open state of the active component too -->
+                <div x-text="faq.{{params.question}}"></div>
+                <svg
+                    x-show="!faq.isOpen"
+                    class="fill-current"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                >
+                    <path
+                        class="heroicon-ui"
+                        d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm1-9h2a1 1 0 010 2h-2v2a1 1 0 01-2 0v-2H9a1 1 0 010-2h2V9a1 1 0 012 0v2z"
+                    />
+                </svg>
+                <svg
+                    x-show="faq.isOpen"
+                    class="fill-current"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                >
+                    <path
+                        class="heroicon-ui"
+                        d="M12 22a10 10 0 110-20 10 10 0 010 20zm0-2a8 8 0 100-16 8 8 0 000 16zm4-8a1 1 0 01-1 1H9a1 1 0 010-2h6a1 1 0 011 1z"
+                    />
+                </svg>
+            </button>
+
+            <div
+                class="mt-2 text-gray-700 text-s"
+                x-html="faq.{{params.answer}}"
+                x-show="faq.isOpen"
+            ></div>
+        </div>
+    </template>
+</div>

@@ -6,7 +6,7 @@ const Image = require('@11ty/eleventy-img');
 const path = require('path');
 
 async function imageShortcode(src, alt) {
-	let sizes = '(min-width: 1024px) 100vw, 50vw';
+	let sizes = '(min-width: 30em) 50vw, 100vw';
 	let srcPrefix = `./src/static/images/`;
 	src = srcPrefix + src;
 	console.log(`Generating image(s) from:  ${src}`);

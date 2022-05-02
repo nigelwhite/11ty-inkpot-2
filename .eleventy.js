@@ -6,6 +6,8 @@ const Image = require('@11ty/eleventy-img');
 const path = require('path');
 
 async function imageShortcode(src, alt, sizes = "100vw") {
+	let srcPrefix = `./src/static/images/`;
+	src = srcPrefix + src;
 	if(alt === undefined) {
 	  // You bet we throw an error on missing alt (alt="" works okay)
 	  throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);

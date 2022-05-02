@@ -10,5 +10,7 @@ items:
       url: '/volunteering'
     - text: Gallery
       url: '/gallery'
+    - text: 'test'
+      url: '/test'
     # - text: Blog
     #   url: '/blog'

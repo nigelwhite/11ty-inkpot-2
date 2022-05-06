@@ -5,7 +5,7 @@ const htmlmin = require('html-minifier');
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
 
-async function imageShortcode(src, alt, sizes = "100vw") {
+async function imageShortcode(src, alt, sizes = "(min-width: 60rem) 80vw, (min-width: 40rem) 90vw, 100vw") {
 	let srcPrefix = `./src/static/images/`;
 	src = srcPrefix + src;
 	if(alt === undefined) {
@@ -14,7 +14,7 @@ async function imageShortcode(src, alt, sizes = "100vw") {
 	}
   
 	let metadata = await Image(src, {
-		widths: [600, 900, 1500],
+		widths: [320, 800, 1200],
 		formats: ['avif', 'webp', 'jpeg'],
 		urlPath: '/images/',
 		outputDir: './_site/images/',

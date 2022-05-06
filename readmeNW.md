@@ -14,3 +14,5 @@ easier https://alexpeterhall.com/blog/2021/04/05/responsive-images-eleventy/
 
 Picture with scrset
 https://webdesign.tutsplus.com/tutorials/quick-tip-how-to-use-html5-picture-for-responsive-images--cms-21015
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+To test which image is being loaded, use the Network tab in FF

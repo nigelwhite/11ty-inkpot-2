@@ -21,7 +21,9 @@
 	</head>
 	<body class="flex flex-col min-h-screen debug-screens">
 		{% include "./partials/navbar.html" %}
-		<div class="flex-grow pt-20">{{ content | safe }}</div>
+		<main class="flex-grow max-w-screen-xl pt-20 mx-auto">
+			{{ content | safe }}
+		</main>
 		{% include "./partials/footer.html" %}
 
 		<script src="/static/js/alpine.js"></script>

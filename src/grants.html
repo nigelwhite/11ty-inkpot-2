@@ -1,12 +1,11 @@
 ---
-layout: pages
+layout: layouts/pages
 title: Grants
 ---
 
 {%- from "./_includes/system/component.njk" import component -%}
 
 <div>
-	
 	<div
 		x-data="{
     faqs: [
@@ -28,18 +27,9 @@ title: Grants
         ]
 }"
 	>
-		
-    {{ component('accordion', {
-		question: 'question',
-		answer: 'answer'
-	  }) }}
-		
-
-	
-    
-    {{ component('button_action', {
-		text: 'Apply',
-		path: 'M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4',
-    link: '../apply_grant/'
-	  }) }}
+		{{ component('accordion', { question: 'question', answer: 'answer' }) }}
+		{{ component('button_action', { text: 'Apply', path: 'M4 16v1a3 3 0 003
+		3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4', link: '../apply_grant/'
+		}) }}
+	</div>
 </div>

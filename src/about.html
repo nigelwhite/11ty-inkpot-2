@@ -1,10 +1,9 @@
 ---
-layout: pages
+layout: layouts/pages
 title: About
 ---
 
 {%- from "./_includes/system/component.njk" import component -%}
-
 
 <div>
 	<div
@@ -33,9 +32,6 @@ title: About
         ]
 }"
 	>
-	{{ component('accordion', {
-		question: 'question',
-		answer: 'answer'
-	  }) }}
+		{{ component('accordion', { question: 'question', answer: 'answer' }) }}
 	</div>
 </div>

@@ -20,11 +20,11 @@
 		{% endif %}
 	</head>
 	<body class="flex flex-col min-h-screen debug-screens">
-		{% include "./partials/navbar.html" %}
+		{% include "../partials/navbar.html" %}
 		<main class="flex-grow">
 			{{ content | safe }}
 		</main>
-		{% include "./partials/footer.html" %}
+		{% include "../partials/footer.html" %}
 
 		<script src="/static/js/alpine.js"></script>
 

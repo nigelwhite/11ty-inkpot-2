@@ -1,26 +1,13 @@
 <?php
 
 if(isset($_POST['fname'])){
-$interests = htmlspecialchars($_POST['interests']);
+
 
 $fname = htmlspecialchars($_POST['fname']);
 $lname = htmlspecialchars($_POST['lname']);
 $email = htmlspecialchars($_POST['email']);
-$oldEmail = htmlspecialchars($_POST['oldEmail']);
-// Chat
-$chatAction = htmlspecialchars($_POST['chatAction']);
-$chatDetails = htmlspecialchars($_POST['chatDetails']);
-// Triangle
-$triangleAction = htmlspecialchars($_POST['triangleAction']);
-$triangleDetails = htmlspecialchars($_POST['triangleDetails']);
-// Activists
-$activistsAction = htmlspecialchars($_POST['activistsAction']);
-$activistsDetails = htmlspecialchars($_POST['activistsDetails']);
-// joining details
-$street = htmlspecialchars($_POST['street']);
-$postcode = htmlspecialchars($_POST['postcode']);
-$perspective = htmlspecialchars($_POST['perspective']);
-$myHope = htmlspecialchars($_POST['myHope']);
+
+
 // assemble stuff
 $name = $fname.' '.$lname;
 $myDetails = '<p>My details are -<br/>
@@ -60,39 +47,7 @@ if ($chatAction === 'subscribe Chat') {
         <p>'.$chatDetails.'</p>'.$myDetails.$thanksAdmin;
     }
 
-// assemble triangle
-$triangleBody = '';
-if ($triangleAction === 'subscribe Triangle') {
-        $triangleBody = '<h2>Please subscribe me to Triangle</h2>'.$myDetails.$joiningDetails.$thanksAdmin;
-    } elseif ($triangleAction === 'unsubscribe Triangle') {
-        $triangleBody = '<h2>Please unsubscribe me from Triangle</h2>'.$myDetails.$thanksAdmin;
-    } elseif ($triangleAction === 'change email Triangle') {
-        $triangleBody = '<h2>Please change my email on Triangle</h2>
-        <p>These are my current details -<br/>
-        Name: '.$name.'<br/>          
-        Email: '.$email.'</p>
-        <p>This is my old email: '.$oldEmail.'</p><hr/>'.$thanksAdmin;
-    } elseif ($triangleAction === 'other Triangle') {
-        $triangleBody = '<h2>Please change my Triangle settings as follows</h2>
-        <p>'.$triangleDetails.'</p>'.$myDetails.$thanksAdmin;
-    }
 
-// assemble activists
-$activistsBody = '';
-if ($activistsAction === 'subscribe Activists') {
-        $activistsBody = '<h2>Please subscribe me to Activists</h2>'.$myDetails.$joiningDetails.$thanksAdmin;
-    } elseif ($activistsAction === 'unsubscribe Activists') {
-        $activistsBody = '<h2>Please unsubscribe me from Activists</h2>'.$myDetails.$thanksAdmin;
-    } elseif ($activistsAction === 'change email Activists') {
-        $activistsBody = '<h2>Please change my email on Activists</h2>
-        <p>These are my current details -<br/>
-        Name: '.$name.'<br/>          
-        Email: '.$email.'</p>
-        <p>This is my old email: '.$oldEmail.'</p><hr/>'.$thanksAdmin;
-    } elseif ($activistsAction === 'other Activists') {
-        $activistsBody = '<h2>Please change my Activists settings as follows</h2>
-        <p>'.$activistsDetails.'</p>'.$myDetails.$thanksAdmin;
-    }
 
 
     if (! empty ($interests) || $perspective === 'dont reside here') {

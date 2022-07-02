@@ -18,11 +18,11 @@
 		{% endif %}
 	</head>
 	<body class="flex flex-col min-h-screen debug-screens">
-		{% include "../partials/navbar.html" %}
-		<main class="flex-grow">{{ content | safe }}</main>
+		<div class="flex-grow">{{ content | safe }}</div>
 		{% include "../partials/footer.html" %}
 
 		<script src="/static/js/alpine.js"></script>
+
 		{% if path == "home" %}
 		<!-- Netlify Identity Widget -->
 		<!-- Needed only if you are using Netlify Identity feature -->

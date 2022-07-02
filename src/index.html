@@ -1,58 +1,33 @@
 ---
 layout: layouts/home
-title: The Inkpot Organic Farm
-path: home
+title: home
 ---
 
-<div class="flex flex-col items-center justify-center">
+{# first row - hero #}
+<header
+	class="container mb-12 bg-fixed bg-bottom bg-vista-sm md:bg-vista-md lg:bg-vista-lg xl:bg-vista-2xl"
+>
 	<h1>
-		Welcome to the
+		Welcome to
 		<strong
-			class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
+			class="m-auto text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
 		>
-			{{title}}
+			The Inkpot
 		</strong>
 	</h1>
 
-	<h2>A permaculture farm in Lincolnshire</h2>
+	<h2 class="text-center">A permaculture farm in Lincolnshire</h2>
+</header>
 
-	<div class="flex flex-col w-full lg:flex-row">
-		{% for item in _data/cards.items %}
-		<div class="lg:w-1/3">
-			<a
-				class="relative block p-8 mx-12 border border-gray-100 shadow-xl rounded-xl"
-				href=""
-			>
-				<div class="mt-4 text-center text-gray-500 sm:pr-8">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						class="w-6 h-6 mx-auto"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke="currentColor"
-						stroke-width="2"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="{{ item.icon }}"
-						/>
-					</svg>
-
-					<h5 class="mt-4 text-xl font-bold text-gray-900">
-						{{ item.title }}
-					</h5>
-
-					<p class="hidden mt-2 sm:block">{{ item.strapline }}</p>
-				</div>
-			</a>
+{# second row #}
+<div class="container mx-auto">
+	<div class="grid grid-cols-1 md:grid-cols-2">
+		<div class="flex justify-center">
+			Some stuff here
+			<div></div>
 		</div>
-		{% endfor %}
+		<div class="mt-12 md:mt-0">
+			{% include "./_includes/partials/produce_pane.html" %}
+		</div>
 	</div>
-	<section class="mt-12 text-center">
-		<div>Run by volunteers</div>
-		<div class="mt-2">Funds local projects</div>
-
-		<div class="mt-2">Founded 2001</div>
-	</section>
 </div>

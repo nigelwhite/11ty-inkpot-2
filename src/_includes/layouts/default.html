@@ -4,9 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>
-			{{title}}
-		</title>
+		<title>{{title}}</title>
 		{% if description %}
 		<meta name="description" content="{{description}}" />
 		{% endif %} {% block head %}{% endblock %}
@@ -20,10 +18,8 @@
 		{% endif %}
 	</head>
 	<body class="flex flex-col min-h-screen debug-screens">
-		{% include "../partials/navbar.html" %}
-		<main class="flex-grow">
-			{{ content | safe }}
-		</main>
+		{% if path ! "/" %} {% include "../partials/navbar.html" %} {% endif %}
+		<main class="flex-grow">{{ content | safe }}</main>
 		{% include "../partials/footer.html" %}
 
 		<script src="/static/js/alpine.js"></script>

@@ -4,6 +4,7 @@
   link: beef
   show: On
   image: cow-mother-child-250x150.jpg
+  alt: Beef for sale
   badges:
   order: 2
   action: Order now
@@ -12,9 +13,12 @@
   link: hogget
   show: On
   image: sheep-250x150.jpg
+  alt: Hogget for sale
   badges:
-      - GT18-2-star250x250.png
-      - GT19-1-star250x250.png
+      - img: GT18-2-star250x250.png
+        alt: 2018 2 star award
+      - img: GT19-1-star250x250.png
+        alt: 2019 1 star award
   order: 3
   action: Order now
 - title: Eggs
@@ -22,6 +26,7 @@
   link: eggs
   show: On
   image: hen-250x150.jpg
+  alt: Eggs for sale
   badges:
   order: 4
   action: Order now
@@ -30,6 +35,7 @@
   link: wool
   show: On
   image: wool-250x150.png
+  alt: Wool for sale
   badges:
   order: 5
   action: Enquire
@@ -38,15 +44,18 @@
   link: turkey
   show: On
   image: turkey-250x150.jpg
+  alt: Turkey for sale
   badges:
-      - GT19-2-star250x250.png
+      - img: GT19-2-star250x250.png
+        alt: 2019 2 star award
   order: 1
-  action: Order now
+  action: Order now for 2020
 - title: Fleeces
   content: hopeful
   link: fleeces
   show: On
   image: fleece-250x150.png
+  alt: Fleeces for sale
   badges:
   order: 6
   action: Enquire
@@ -55,6 +64,7 @@
   link: honey
   show: On
   image: honey-250x150.jpg
+  alt: Honey for sale
   badges:
   order: 7
   action: Enquire

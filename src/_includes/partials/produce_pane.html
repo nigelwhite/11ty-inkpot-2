@@ -1,0 +1,44 @@
+<div>
+	{# great taste for whole farm #}
+	<div class="flex justify-center">
+		<h2 class="self-center mr-4 text-lg">Awarded Great Taste Producer</h2>
+		<a href="https://greattasteawards.co.uk/" target="_blank">
+			<img
+				class="self-center w-14"
+				src="/static/img/logos/GTproducer250x250.png"
+				alt="Great Taste Producer logo"
+			/>
+		</a>
+	</div>
+	<ul class="flex flex-wrap">
+		{% for product in produce %} {# cards #}
+		<li class="m-4 rounded">
+			<div class="relative">
+				<img
+					class="rounded"
+					src="/static/img/cards/{{product.image}}"
+					alt="{{product.alt}}"
+				/>
+				<div class="absolute z-50 text-2xl text-white top-1 left-2">
+					{{product.title}}
+				</div>
+				{% if product.badges %}
+				<div
+					class="absolute z-50 flex transform translate-x-4 translate-y-4 right-2 bottom-1"
+				>
+					{% for badge in product.badges %}
+
+					<img
+						class="w-10"
+						src="/static/img/logos/{{badge.img}}"
+						alt="{{badge.alt}}"
+					/>
+
+					{% endfor %}
+				</div>
+				{% endif %}
+			</div>
+		</li>
+		{# end cards #} {% endfor %}
+	</ul>
+</div>

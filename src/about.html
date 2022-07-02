@@ -3,35 +3,4 @@ layout: layouts/pages
 title: About
 ---
 
-{%- from "./_includes/system/component.njk" import component -%}
-
-<div>
-	<div
-		x-data="{
-    faqs: [
-        {
-            question: 'Opening hours',
-            answer: '24 / 7',
-            isOpen: true,
-        },
-        {
-            question: 'History',
-            answer: 'Opened in 2001',
-            isOpen: false,
-        },
-        {
-            question: 'Committee',
-            answer: 'These folk. Join us and help',
-            isOpen: false,
-        },
-		{
-            question: 'Contact',
-            answer: 'Phone. Email',
-            isOpen: false,
-        },
-        ]
-}"
-	>
-		{{ component('accordion', { question: 'question', answer: 'answer' }) }}
-	</div>
-</div>
+<p>The Inkpot is splendid</p>

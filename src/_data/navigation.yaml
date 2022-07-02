@@ -3,9 +3,9 @@ items:
     - text: Home
       url: '/'
     - text: About
-      url: '/one'
+      url: '/about'
     - text: Produce
-      url: '/two'
+      url: '/'
     - text: Learn
       url: '#'
     - text: Diary

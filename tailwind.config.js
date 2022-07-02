@@ -7,11 +7,11 @@ module.exports = {
 		extend: {
 			colors: {},
 			backgroundImage: (theme) => ({
-				'vista-sm': "url('/static/img/bg-sm.jpg')",
-				'vista-lg': "url('/static/img/bg-lg.jpg')",
-				'vista-md': "url('/static/img/bg-md.jpg')",
-				'vista-lg': "url('/static/img/bg-lg.jpg')",
-				'vista-2xl': "url('/static/img/bg-2xl.jpg')",
+				'vista-sm': "url('/static/img/bg/bg-sm.jpg')",
+				'vista-lg': "url('/static/img/bg/bg-lg.jpg')",
+				'vista-md': "url('/static/img/bg/bg-md.jpg')",
+				'vista-lg': "url('/static/img/bg/bg-lg.jpg')",
+				'vista-2xl': "url('/static/img/bg/bg-2xl.jpg')",
 			}),
 		},
 	},

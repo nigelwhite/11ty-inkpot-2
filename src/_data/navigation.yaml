@@ -1,16 +1,14 @@
 ---
 items:
+    - text: Home
+      url: '/'
     - text: About
-      url: '/about'
-    - text: Donate
-      url: '/donate'
-    - text: Grants
-      url: '/grants'
-    - text: Volunteering
-      url: '/volunteering'
-    - text: Gallery
-      url: '/gallery'
-    # - text: 'test'
-    #   url: '/test'
-    # - text: Blog
-    #   url: '/blog'
+      url: '/one'
+    - text: Produce
+      url: '/two'
+    - text: Learn
+      url: '#'
+    - text: Diary
+      url: '#'
+    - text: Contact
+      url: '#'

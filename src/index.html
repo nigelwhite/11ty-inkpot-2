@@ -1,6 +1,6 @@
 ---
 layout: layouts/home
-title: Cuckoo's Nest
+title: The Inkpot Organic Farm
 path: home
 ---
 
@@ -14,11 +14,10 @@ path: home
 		</strong>
 	</h1>
 
-	<h2>Community owned charity shop</h2>
-	<h3 class="mb-12">in Marsden</h3>
+	<h2>A permaculture farm in Lincolnshire</h2>
 
 	<div class="flex flex-col w-full lg:flex-row">
-		{% for item in cards.items %}
+		{% for item in _data/cards.items %}
 		<div class="lg:w-1/3">
 			<a
 				class="relative block p-8 mx-12 border border-gray-100 shadow-xl rounded-xl"
@@ -44,9 +43,7 @@ path: home
 						{{ item.title }}
 					</h5>
 
-					<p class="hidden mt-2 sm:block">
-						{{ item.strapline }}
-					</p>
+					<p class="hidden mt-2 sm:block">{{ item.strapline }}</p>
 				</div>
 			</a>
 		</div>
@@ -54,9 +51,7 @@ path: home
 	</div>
 	<section class="mt-12 text-center">
 		<div>Run by volunteers</div>
-		<div class="mt-2">
-			Funds local projects
-		</div>
+		<div class="mt-2">Funds local projects</div>
 
 		<div class="mt-2">Founded 2001</div>
 	</section>

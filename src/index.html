@@ -1,33 +1,46 @@
 ---
-layout: layouts/default
+layout: layouts/homepage
 title: home
 ---
 
-{# first row - hero #}
+{# hero #}
 <header
-	class="container mb-12 bg-fixed bg-bottom bg-vista-sm md:bg-vista-md lg:bg-vista-lg xl:bg-vista-2xl"
+	class="container h-screen m-auto mb-12 bg-fixed bg-bottom bg-vista-sm md:bg-vista-md lg:bg-vista-lg xl:bg-vista-2xl"
 >
-	<h1>
-		Welcome to
-		<strong
-			class="m-auto text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500"
-		>
-			The Inkpot
-		</strong>
-	</h1>
 
-	<h2 class="text-center">A permaculture farm in Lincolnshire</h2>
+{% include "./_includes/partials/navbar.html" %}
+
+	<div class="p-5 text-center text-black rounded-xl">
+		<div class="text-3xl">The Inkpot</div>
+    <div class="text-lg">A 25 acre organic permaculture demonstration farm in South Lincolnshire</div>
+	</div>
+  
 </header>
 
 {# second row #}
 <div class="container mx-auto">
-	<div class="grid grid-cols-1 md:grid-cols-2">
-		<div class="flex justify-center">
-			Some stuff here
-			<div></div>
-		</div>
-		<div class="mt-12 md:mt-0">
-			{% include "./_includes/partials/produce_pane.html" %}
-		</div>
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="flex justify-center">
+    
+      <blockquote class="instagram-media" data-instgrm-captioned>
+        <div style="padding:16px;">
+          <a
+              href="https://www.instagram.com/p/CP1gUKSHFbU/?utm_source=ig_embed&amp;utm_campaign=loading"
+              target="_blank"
+          >
+        </div>
+        <script async src="//www.instagram.com/embed.js"></script>
+      </blockquote>
+      <div>
+		
 	</div>
+      
+    </div>
+    <div class="mt-12 md:mt-0">
+      
+      {% include "./_includes/partials/produce_pane.html" %} 
+      
+       
+    </div>
+  </div>
 </div>
